@@ -18,7 +18,7 @@ app = FastAPI()
 def get_db():
     db = SessionLocal()
     try:
-        yield db
+        yield db #定義生成器 使用 yield 將 db 作為生成器的產出值返回
     finally:
         db.close()
     
