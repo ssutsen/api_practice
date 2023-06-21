@@ -5,5 +5,6 @@ from database import Base
 class Login(Base):
     __tablename__ = "login"
 
-    address = Column(String, primary_key=True, index=True)
-    password = (String)
+    id = Column(Integer, primary_key=True, index=True)
+    address = Column(String)
+    password = Column(String)
